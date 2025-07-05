@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Show all employees</title>
+</head>
+<body>
+	<h2>Employee info:</h2>
+	<table border>
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>NAME</th>
+				<th>Salary</th>
+				<th>Team</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="emp:${empList}">
+				<td th:text="${emp.id}"></td>
+				<td th:text="${emp.name}"></td>
+				<td th:text="${emp.salary}"></td>
+				<td th:text="${emp.team}"></td>
+			</tr>
+		</tbody>
+	</table>
+
+</body>
+</html>

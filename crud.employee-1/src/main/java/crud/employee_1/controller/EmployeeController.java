@@ -64,4 +64,12 @@ public class EmployeeController {
 		return "index";
 	}
 	
+	@GetMapping("/allEmployees")
+	public String allEmployees(Model m) {
+		List<Employee> empList = service.fetchAllEmployees();
+		m.addAttribute("empList", empList);
+		return "show_all_employees";
+	}
+	
+	
 }
